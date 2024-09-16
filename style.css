@@ -33,8 +33,11 @@ footer{
     object-position: center;
     border-radius: 8%;
 }
-
-body{
-    background-color: rgb(39, 39, 41);
+/* .color-hint {
+        background: linear-gradient(blue, 10%, pink);
+      } */
+.frasecelebre{
+    text-align: center;
 }
+
 /* Estilos John */
