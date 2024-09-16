@@ -9,3 +9,23 @@
 
 
 /* Estilos John */
+
+td img{
+    width: 100px;
+    height: 100px;
+}
+
+td {
+    vertical-align: center;
+    padding: auto;
+    margin: auto;
+}
+
+.boton-carrito{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(167, 167, 230);
+    text-align: center;
+    vertical-align: center;
+}
