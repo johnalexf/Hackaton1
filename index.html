@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- se agrega un icono como favicon a la pagina por medio de la siguiente linea -->
     <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEWbyUz////28vD48/OZyEj89fn69PaUxjqWx0CVxj2YyEWTxTf89fqUxTqWxj6SxTXf58qhzFnd7Miu0XPq89308eyoz2jc5sWx0nnp7Nvu7uPW47z7/fju9ePm8dfE253L3qm714zP4K+mz2PV57rQ5bLg7s241ofA2ZXi6dCjzV3H4KG72YzZ6sHz+Ozm69Yd9DCGAAAQwElEQVR4nO2dZ3ejuhaGwQgEYtziEtxrYsceJ///313cErbqBgRk7jrvp7PWySR6kLSbmuP+v8tpugGV6z/Cf1//EdrT/KHlcrhYfM5r+7uVE86Xn63RVa2bvG03imibxtTZJce3l0XlqFUSLi7HAeuyVlb+jjgPEcLCDo3J4HxZVNiKigjn7+cxpSEjTtzzMoDeF3V4EdZpdwbnZTUtqYRwed7FEbv3FTv4oAsPTCC8Y4ZRPF4PK2iNbcL55dB50t0IR1lAbxrLAR+UlP19sdwgy4SXJO6AToJjVN2FP18kaid2IS0SLg+0Q2B7wyMYo95E14U/kJ2NxeFqi3C+dqjQP2QXQEM6IDIkCWS7/2bLjdghHB7iUNL4cArGqPcqGlKlwvZfOz7EBuHLLpZOr24PdqHnILvw0ZHdgQ0PUp7w0o/kDY/WPhyjG5OZ4UXau/fGCS9OpGheePgDe/CjmxPwykj7ZRnLEb6r+i8dY2M4RFutfGP0m7G9KzdWyxAuxm1lo0mf4/tjdIXKXxUPPhshnB+66k4hDJrRVjDLYUeF39Y9NkD41tb1STSBgN60XRwwVcguNRMuTioDcxPvJ1pev9AkzKhddKgWIzxrBugVcMYB+knRSfgjEr/VRrjoh9q2xFufA1xrexyraFykGwsQrvUd6FDO07eC1wKeUCbSLjAbcxPOx4b+oCvo6dOMopyVyaqdVE64DA0zKjrygCNS1spkxJy88XhOwrVpvEUbDrDlnSwCpuruqyRMTBYjPHBzMM0Jy5tRqPhvZYTzvqmxIuCfg97uFlE4zpMd5yBcyJJc+KcTAfBoxU9wYk4Ot4EnfDc4CRmgvy4RjWpE2vhCDppwb/RpYcLnS/7MkiMU1UUX5LCERiPqhAMe0JqnlyJiTSqS8GwsA0oAexUCpojIMBVHeDRGJUwE/KhmDn4rXtsjPBrbKgGUrMHYRjzbIjwX6EFvYvQtFhAxAxVBuDbOwYYAcebGTGh2E2zs8YBTVgcgymkYCd9/M2CKaCw1mggX5iEqAbSZLxlETQGcgXBunE5s53kNAjqEGcJwA6GxRMZOrUYBHXIalSE0lshIXwQsVr0vKjr19IhaQmOJjPRHPOCoXsBoe3VURQmXJjNKnKYByfiWsOmmooZwbsrOCZk2DHgdo7c/XIxwbJiEJGwcMFw9ginNVFQTGichv/pSPyBxvqNF9ThVEi5Mk5B+8Ksvo9LLLzlFX3++sRJRSWhqbfe1ccCHmXkoL+HZYGaE5aX6AZ34C0yTfISmMSqsvngtYzHVtghX2stHaKjEi4sTrVPdgE4MLJ033eUhfNPbUbG07e1qB2SwC/1EkQ5LCef6Eou4kcQz+c4KxHVhjzqh1J5KCfUbQ4SNJK3A+uqLWWQAujBI7RzbYAmHWjMjbCRJB4j91RejKNi5Guyv86orW1uUEe60ZoZ+8YAVLC8ZRU6wC2/RFBngCF+0s1BwhH82DQA64R504fbehlhStZEQan9ztOL3WayqWD8zKoSG4BEQkxOGcK9rMeMX0Pxt5aVtaTuO2ZHkzZ7DiIrVRZFQlx+QPjcHg+rWz7SCxsD/DhhJ30yo7UI+IwyK7Bm1IGhnvN5PmyOhEwVCXRcK25onjQzR9Etvsw3xk582izORJ7xoujDkrIzdnTJ5FGfPqcBjKm1+TzFPqAm52YDPJ2rPlx6C8UywyrorMtYTLjULafCATxU7ZbAKZ8AZwv/JBzYcYaLulS484NOQp7+JgkHagxOL/dURfqpNIz8Jg2Yc4VXcIOXzhHiuITwrxx1/wKfQ2QJLghFbi7eN4ZuGUD2xKHfAZ9TYEE3nyzTbkpnQkr6a8F3pKqIt7MLA8obDPIIlNl80HXDDFCBU2hn4S6vZj4cWW4OvLZoDmAlnCefK9V5ujJY6PFFaICb1XiXfuqMi3Ks6JoRfrbFg7S6SbYxgSa8CwWmWcKwYpOTE2dGmYpmb2AEQyowjO8gJ5yr734V1C785V38VCGi8D6lxpHJC1SBlG3iY9xVzmLc6xVlfEaykDi47TDOEqkO6IYxHR01Fo3eRPvAV8qpZNnLLECqCbpiLWTngU0awfjFS2DwmI1S4e9KHdjTPaeUqBKehGNDcRYcSwqO8b6IZTCmaSnqfomAaqo4Wh2cJodwFkB1c/1B8h9rETUNVzSWTB38TfsotJCyee5PmMoq72CYzabypcsrEIuFLR/aDfBeqgoLahJuG6eRaCoTy4Re9gi5s2sxwEbJyGmYn4jehNB2Co/67eN6gCJiG6vDxZ5HmSSjPK+TrHw2KgFMr6mmYyS+ehEupN2QwsW++C0GWI82cnmovOMI32Q+zFQjjm+9CJ/rITkOd6+pcOELpnIWJ7y+YhbCOqLXs7MwRyiJYWLXzZo0sFMIWwZVfnWX/NjVPQlnrYWm5eV/I+3t5bvgUgYSfss8RwXCmcV/I2XaDXXgWhh21KeXKBU1HpFdF2WqDtETzI7oAhLL8PgTxjLQgUrfAqFKG3Xd1XgChrJxPs5Pae23eznBlW1X2+9CzuP8glHQ4t/6R+5KnCgTye62/v/0wIJTYSVi9+BWDFBj3YK1vEkkAoWRI04m5alezQJMCzVrnVWQHCGWmFHThqvmILe1DsD/B6J6zhJLMAkbxv8Hdc4ZGl1jcRLOEEodvXOGpX7kMzbfLvxMuRADgDX/HNISGxjhvHicT74RDkRCWC35B4sQbGuM9mu0soSRoA7P6V3hDrknGFj3CtjuhWO+GRbbfZ2g0hcSnoqGe0LxKV7dyGppnQfFOKBZLcQsgtYozNMaPbiCEJZ/JbzClwNAgLuw1EWZzTX5jVTOChsZs3AGhOA+hO1RXz+sTyHUwFQcDYdT7bYSgtIlpEbCloj8EhUnvNzh8MKowNRXgD4f/ACFYGsU4aBDTiHHpryMkDijeIkwfiEvF3ALOQ+VuqfoEKn/eF4IQ5BZifvjrbCkoqqAGFcgPxZ0mcK3VHCJVLrgmg8oE9HWacJslxAyKikXlh2TU4uo0gmmCC2vmQL5qcaVSxMYzrtYm1EvBGkjLs3eLbEFBf4+ZNVy9VKh5w3owZlRUK2DbEYmFUPOWuANQ8TbUJqsXfmn0KW7dQgzbwK9svFzKbTTHGL7n1jbl+iEMapp2F3Aaoip/3PqhxCFm3UXjxhROQ8OKxV3PDZjKdXxoTJs2NdAbYh7kEdbx/wrGFGyHangFmNszgfFdwl4McT8NyFYaXiCFVSPUNBT204jGFO7EwKQr1QlWu1GGXdgTJWYX7K/x5EZdgrkhrjzddjlCyd5EcDal0WFaoHj7s0lYs78UeMSW12AfFiiLMXF/6cVQ9m7SmhZYJYreBULJPm84TLVPF1YqzjWjPPPPUVndXn0wOPAP31kXHKSobJz8XBqlO28BX9j0qr6fWyluzwQqZJOdt5CcmQH5RWOLiNAe4OJHupQQuuI8gycrm+pEeGYUt0UydGWE4jzL3LzY3EzkAmRcXnGQEkryfHjoqZkTM3Ag4QZpR37+UHKGlD8y08SGBXhFBG6QZq9VMJwDptxlGPUTcvt4UZaUZF+FMpzl5jqxgWPq8L6kwPwPUkUXBaHs3AwFG4Vbf+o+QQpLUMj4P3vQ2XinArf/v/ZTwPBomeSKCInAYXVI+CL5QtEenpKt9mkVXtwHxhXE6FJJ6MryEgL6sOUf6ywswi5E2hnIZL6fhsG3tdPgrb6Byhs6VMQRrjWE0juGYv5W6/rOP3FndHELtdo7hqS3DnAfssYdUtwdpT7qUhxoZwTCd9lU5q42qe+mvRicnUPuzIqHWkL5mXXKjdOabksMjzDwR2Vvpvva5Hfu8de3tPxtDYjEgSdYezhXYbpzz5XemRBy9rQWxC6o9aku+eAkXn4p3n0pPZcf83fMV4/IfVVkwBYJr82K95cqHrsXrkeueC5yN45gz+gi7i9VdKLkiuue+mV1C+Iv31qjfKF4fan0HmH5pTb8zZetYFLhPSf80wsj1BiVXEErI1RcYRqK7+COdlXFqPyFzMisTTCkckLVHaaUvwa65QWHajJi/uJ+5IUcgi9UES4V9XvhRfH0285oBSNVfLIVNx/Qd7IrH7LqzgTEYHqyPlKFBz//4BYv+ZtLNYTK6wWFC9mvI/VofEY3n4Q3abHVoRxvI7hrqcdwpL3Y8r/6NruRbrg/4U1xuUyU430LzTs63b2I6AUre7OxuxZMNm6ni9TMqAnVD0DEQgtus3Fgh5GEPeHha+TbEl3FQ4iqt4LU1RjKR+G37+z3TlF5xnA8Fd6FRr5M0FE9LKt870nTjIR/0/HOOHNKvq5K6Nrnf3Mwwy09y15FMBBqHiphJz4Mf0zHfb9EPxIqdmAa/CLX1mPlY53qd9fOKnt6fYjlQzJSr4yzHS1YiQudmdCB+GeTqfplYDWh9jGWLv+i1fdY/TjQ/IOVhGQbiOMiwO6gZ7LnV8yEc3Unps5nwD/u+M042p5ortdySdTfesIAvfUg7tcQonniUUOofwqYMcGuf7fMn6z6WEgSxknPl/ClcxAb1neHGgodoXvWDpJ4I7Op945MIddjGpooWUjH25E4/67yzY9JP9TWPs+tJXT1rx8wR9mNN8jR62pMoxRTVmYmKR05zKZyvKsfxO5QCg9aBj2h9sWStJnxYSQbXxlK72t2HDg0BU3FbgrDiFJnsErpJNbl8S9bA2ysq/aEKMJPnbVxrsNMZgNBW70g8FvTj9f9erU6Ho+r9XbWm7T8IFCO8auNcdBOp+SbzoYXylKF/Z5qoAHOK+ld1//W/7C/xidksSzrzUPovhgfBaaDLwQjXsF0jF/6Kf+2uuu+GWc8iZOJNUYvWOdIU7pCAbgAoXs2b41PGe30Y5qj5EmnY62fQBO6R4TnTePmV6nfzsf3lSvPpKqMKS+hu0Ft6YyctcJ5o/mSOE+018YA4gjdDa5cGdJDLzB4D5UCvzfIxYfrQSyhe0QesWSRc/xSO3J19422eXPLGAeIJXTP6F3ejDrHnqfz5wJea5bkTrm6CCOTi9B9wy+mERaFyXYSmAdsGgb4030S5c8oEW4iL2Hq+nPlfGlcnax7o1t0JivrXOGC6ezYL5Awp95JsgRTmtAd5m1K2pfUSY7b3mQU+H7wrfS/W5Pe9jgIzfmV4hebQrVihO5nkae30ywpiijrj5PDZpNG3ptDMjgResuqCsBdxfqGYLswoesmhfcKkTQhfIiUXFilibmhhQndc9NvIzikuzY3swShuwwbfoSFGZOJkoTuPEdqY1/ROM8ULEboujnSU8siaDdfjtBdWF0vxCvs53ASpQivBqf+biRdZCBqhdBdnOqejdGpSAcWJ0zj1KJLMIXENEsvVRG680NtQ5V0D7lNqAXCNFDd1XOCpr3TrUtUSZjmG46FpW29SNQXd+PVR+i6+2oZSeSgE8GKCCtltMBngzAdq6dKdpoyuis3Pu+yQZjG40nXsu8gYTfJG2PLZYcwzY7PLLIHySJyVm6uyClbhKnek7jkhpq7SCdO8GUYoywSpkHAftAtCck68eBS3L1LZJUw1fyS0KhgBYawqJ3YxXPtE171fuzHeSlTuvh0tmNboKogTDV/Oe5iZK3wumch3p1fbHfeQxUR3jTcb8ZhHIUK0Ot2jE4Uh+PjvkzcaVKVhDd9Li/nv4M+i+M2jZ6i7Thmp8HmfFnacgpKVU74rfnnYrhcvr+/L5fDxWdFQ1Ki+gib0n+E/77+I/z39T+2GyGUtjmbPQAAAABJRU5ErkJggg==" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <!-- link de vinculo al bootstrap y al css local -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -13,14 +15,20 @@
 <body>
 
     <header>
+        <!-- Contenedor nav principal para la realizacion y ajuste de los estilos a traves de bootstrap y css -->
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(255, 255, 255,0.2)";>
+            <!-- Contenedor de tipo fluid para abarcar todo el ancho de la pagina -->
             <div class="container-fluid text-rigth">
+                <!-- Ancor para el titulo de la pagina y el icono de la misma -->
                 <a class ="navbar-brand" href=""><h2 class="text-rigth">TCOMPRA</h2></a>
                 <a class="navbar-brand" href="#"><img  width="20%" src="https://cdn-icons-png.flaticon.com/128/523/523686.png" alt=""></a>
+                <!-- boton que se visualiza en al disminuir el tamaño de la pantalla y despliega el navegador -->
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
+              <!-- contenedor de la barra colapsable -->
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- tabla del nav con sus items -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Inicio</a>
@@ -44,11 +52,17 @@
 
 
     <main>
+        <!-- contenedor pincipal del carrusel -->
         <div class="container-fluid justify-content-center">
+            <!-- contenedor de columnas -->
             <div class="row">
+                <!-- columna de espaciado izquierdo -->
                 <div class="col-sm-2"> </div>
+                <!-- columna del carrusel con clases y propiedades para el uso de la animacion de desplazamiento continuo -->
                 <div class="col-sm-8"><div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                    <!-- contenedor de contenedores de imagenes del carrusel -->
                     <div class="carousel-inner">
+                        <!-- contenedores de imagenes del carrusel, con clases, y ajustes directos. -->
                       <div class="carousel-item active">
                         <img  class= "imagencarrusel" width="100%" height="250vh"  src="https://t3.ftcdn.net/jpg/05/15/41/90/360_F_515419034_pbFpjmwb36PxEQRkBdcOMlTFWJ1zfIAH.jpg" class="d-block w-100" alt="...">
                       </div>
@@ -59,15 +73,18 @@
                         <img  class="imagencarrusel" width="100%" height="250vh" src="https://img.freepik.com/vector-gratis/plantilla-portada-redes-sociales-horizontales-juego-tenis_23-2149983683.jpg?t=st=1726505668~exp=1726509268~hmac=71800045e974e7dc7ec1169d397d31b5551ce695131e64728a6c0d95127c598e&w=826" class="d-block w-100" alt="...">
                       </div>
                     </div>
+                    <!-- boton de regresar del carrusel -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                      <span class="visually-hidden">Anterior</span>
                     </button>
+                    <!-- boton de avanzar del carrusel -->
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                      <span class="visually-hidden">Siguiente</span>
                     </button>
                   </div></div>
+                  <!-- contenedor columna de espacio derecho -->
                 <div class="col-sm-2"> </div>
               </div>
         </div>
