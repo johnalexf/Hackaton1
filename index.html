@@ -36,13 +36,13 @@
                     <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Conócenos</a>
+                    <a class="nav-link active" aria-current="page" href="#conocenos">Conócenos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Contáctanos</a>
+                    <a class="nav-link active" aria-current="page" href="#conocenos">Contáctanos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Productos<span class="badge text-bg-danger">Nuevo</span></a>
+                    <a class="nav-link active" aria-current="page" href="#productos">Productos<span class="badge text-bg-danger">Nuevo</span></a>
                   </li>
                   </ul>
               </div>
@@ -55,15 +55,6 @@
 
     <main>
 
-        
-        
-        
-        
-        
-
-        
-            
-       
 
 
         <!-- Linea de separación o salto de linea  -->
@@ -106,7 +97,10 @@
                   <!-- contenedor columna de espacio derecho -->
                 <div class="col-sm-2"> </div>
               </div>
-        </div>        <div class="container-fluid">
+
+        </div>        
+        
+        <div class="container-fluid productos" id="productos">
             <div class="col-12">
                 <div class="row">
                     <div class="col-2"></div>
@@ -123,7 +117,7 @@
                                     class="card-img-top" alt="Air Jordan 4 Retro">
                                 <p class="card-text">Air Jordan 4 Retro</p>
                                 <p class="card-text">$ 329.900</p>
-                                <button type="button" class="btn btn-primary" onclick="">Comprar</button>
+                                <button type="button" class="btn btn-primary"  onclick="agregarProducto('Air Jordan 4 Retro')">Comprar</button>
                             </div>
 
                             <!-- Producto 2 -->
@@ -132,7 +126,7 @@
                                     class="card-img-top" alt="Under Armour Charged Verssert">
                                 <p class="card-text">Under Armour Charged Verssert</p>
                                 <p class="card-text">$ 799.000</p>
-                                <button type="button" class="btn btn-primary">Comprar</button>
+                                <button type="button" class="btn btn-primary"  onclick="agregarProducto('Under Armour Charged Verssert')">Comprar</button>
                             </div>
 
                             <!-- Producto 3 -->
@@ -141,61 +135,61 @@
                                     class="card-img-top" alt="Under Armour Mega 2">
                                 <p class="card-text">Under Armour Mega 2</p>
                                 <p class="card-text">$ 510.900</p>
-                                <button type="button" class="btn btn-primary">Comprar</button>
+                                <button type="button" class="btn btn-primary"  onclick="agregarProducto('')">Comprar</button>
                             </div>
 
                             <!-- Producto 4 -->
                             <div class="col-3">
-                                <img src="https://tennisworldcolombia.com/wp-content/uploads/2023/11/Diseno-sin-titulo-2023-11-02T122444.820-400x400.png"
+                                <img src="https://img.freepik.com/fotos-premium/hombre-jugar-al-tenis_249974-1904.jpg?w=360"
                                     class="card-img-top" alt="B FLY 21">
-                                <p class="card-text">B FLY 21</p>
-                                <p class="card-text">$ 205.000</p>
-                                <button type="button" class="btn btn-primary">Comprar</button>
+                                <p class="card-text">'Ropa para hombre'</p>
+                                <p class="card-text">$ 128.000</p>
+                                <button type="button" class="btn btn-primary"  onclick="agregarProducto('Ropa para hombre')">Comprar</button>
                             </div>
 
                             <!-- Producto 5 -->
                             <div class="col-3">
-                                <img src="https://tennisworldcolombia.com/wp-content/uploads/2023/11/Diseno-sin-titulo-2023-11-02T122444.820-400x400.png"
+                                <img src="https://img.freepik.com/foto-gratis/retrato-hermosa-mujer-jugando-tenis_23-2148290274.jpg?t=st=1726514897~exp=1726518497~hmac=42defc092ca862505d3e75818fb3d41a3a0dbe04e638522daf08e777228ef4ee&w=360"
                                     class="card-img-top" alt="B FLY 21">
                                 <p class="card-text">B FLY 21</p>
-                                <p class="card-text">$ 205.000</p>
-                                <button type="button" class="btn btn-primary">Comprar</button>
+                                <p class="card-text">$ 147.000</p>
+                                <button type="button" class="btn btn-primary"  onclick="agregarProducto('Ropa para mujer')">Comprar</button>
                             </div>
 
                             <!-- Producto 6 -->
                             <div class="col-3">
-                                <img src="https://tennisworldcolombia.com/wp-content/uploads/2023/11/Diseno-sin-titulo-2023-11-02T122444.820-400x400.png"
+                                <img src="https://img.freepik.com/foto-gratis/primer-plano-nina-tenencia-badminton_23-2147904650.jpg?t=st=1726514878~exp=1726518478~hmac=ca17922a2da50381bab2ca865546d9df99c3e0dc78ebe6ebe302102d96593564&w=740"
                                     class="card-img-top" alt="B FLY 21">
-                                <p class="card-text">B FLY 21</p>
-                                <p class="card-text">$ 205.000</p>
-                                <button type="button" class="btn btn-primary">Comprar</button>
+                                <p class="card-text">Ropa para niñas</p>
+                                <p class="card-text">$ 98.000</p>
+                                <button type="button" class="btn btn-primary"  onclick="agregarProducto('Ropa para niñas')">Comprar</button>
                             </div>
 
                             <!-- Producto 7 -->
                             <div class="col-3">
-                                <img src="https://tennisworldcolombia.com/wp-content/uploads/2023/11/Diseno-sin-titulo-2023-11-02T122444.820-400x400.png"
+                                <img src="https://img.freepik.com/foto-gratis/concepto-equipo-deporte-pelota-tenis-raqueta_53876-31460.jpg?t=st=1726514610~exp=1726518210~hmac=8905cc8f3cc654fbc806eba0bb930c0575791e514b58670edefdaa6c04eb4ec9&w=740"
                                     class="card-img-top" alt="B FLY 21">
-                                <p class="card-text">B FLY 21</p>
-                                <p class="card-text">$ 205.000</p>
-                                <button type="button" class="btn btn-primary">Comprar</button>
+                                <p class="card-text">Raqueta para adultos color roja</p>
+                                <p class="card-text">$ 321.000</p>
+                                <button type="button" class="btn btn-primary" onclick="agregarProducto('Raqueta para adultos color roja')">Comprar</button>
                             </div>
 
                             <!-- Producto 8 -->
                             <div class="col-3">
-                                <img src="https://tennisworldcolombia.com/wp-content/uploads/2023/11/Diseno-sin-titulo-2023-11-02T122444.820-400x400.png"
+                                <img src="https://img.freepik.com/foto-gratis/pelota-amarilla-acostado-tenis-raqueta_23-2147829466.jpg?t=st=1726514579~exp=1726518179~hmac=5e3bb9ef2b5eeef6678f490fed7ddad3de0e815a9da202a9ab1b5a7e116ac90f&w=740"
                                     class="card-img-top" alt="B FLY 21">
-                                <p class="card-text">B FLY 21</p>
-                                <p class="card-text">$ 205.000</p>
-                                <button type="button" class="btn btn-primary">Comprar</button>
+                                <p class="card-text">Raqueta para adultos color amarilla</p>
+                                <p class="card-text">$ 321.000</p>
+                                <button type="button" class="btn btn-primary" onclick="agregarProducto('Raqueta para adultos color amarilla')">Comprar</button>
                             </div>
 
                             <!-- Producto 9 -->
                             <div class="col-3">
-                                <img src="https://tennisworldcolombia.com/wp-content/uploads/2023/11/Diseno-sin-titulo-2023-11-02T122444.820-400x400.png"
+                                <img src="https://img.freepik.com/foto-gratis/raquetas-badminton-alto-angulo-campo_23-2149733001.jpg?t=st=1726514542~exp=1726518142~hmac=61653d6d329c95ded496be830c2736438a0da84c5a00d626d10c5bdeb94f05a8&w=360"
                                     class="card-img-top" alt="B FLY 21">
-                                <p class="card-text">B FLY 21</p>
-                                <p class="card-text">$ 205.000</p>
-                                <button type="button" class="btn btn-primary">Comprar</button>
+                                <p class="card-text">Raqueta para niños</p>
+                                <p class="card-text">$ 150.000</p>
+                                <button type="button" class="btn btn-primary" onclick="agregarProducto('Raqueta para niños')">Comprar</button>
                             </div>
 
                             <!-- Fin Lista de productos-->
@@ -211,17 +205,6 @@
         
         <!-- Aqui va charline -->
 
-
-
-        <button onclick="agregarProducto('Raqueta para niños')"> Agregar </button>
-        <button onclick="agregarProducto('Raqueta para adultos color amarilla')"> Agregar </button>
-        <button onclick="agregarProducto('Raqueta para adultos color roja')"> pelota </button>
-        <button onclick="agregarProducto('Ropa para niñas')"> zapato </button>
-        <button onclick="agregarProducto('Ropa para mujer')"> zapato </button>
-        <button onclick="agregarProducto('Ropa para hombre')"> pelota </button>
-        <button onclick="agregarProducto('Air Jordan 4 Retro')"> zapato </button>
-        <button onclick="agregarProducto('Under Armour Charged Verssert')"> pelota </button>
-        <button onclick="agregarProducto('Under Armour Mega 2')"> zapato </button>
         
         <div class = "carritoCompras">
             <div class="row">
@@ -260,7 +243,7 @@
 
     </main>
 
-    <footer>
+    <footer id="conocenos">
         <div class="container-fluid">
             <br>
             <br>
