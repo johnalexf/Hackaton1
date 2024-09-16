@@ -51,8 +51,14 @@ td img{
     height: 100px;
 }
 
-td {
-    vertical-align: center;
+tr th{
+    text-align: center;
+}
+
+tr td {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: auto;
     margin: auto;
 }

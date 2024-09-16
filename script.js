@@ -90,7 +90,7 @@ function agregarProducto(productoComprado){
     if(indiceNoEncontrado == -1){
         listaCompras.push(indeceProductoComprado);
         actualizarCarrito();
-        
+        alert(`El producto sera agregado al carrito`);
     }
     else{
         alert("Producto ya agregado, revisa en tu lista de compras");
@@ -117,20 +117,20 @@ function actualizarCarrito(){
     contenidoCarritoHTML = "";
     for( const valor of listaCompras){
         contenidoCarritoHTML += `<tr>`+
-        `<td> <img src="${listaProductos[valor].img}" alt=""> <p> ${listaProductos[valor].nombre} </p> </td>` +
+        `<td> <img src="${listaProductos[valor].img}" alt=""> <h6> ${listaProductos[valor].nombre} </h6> </td>` +
         `<td> <button class="boton-carrito" onclick="disminuir('${listaProductos[valor].nombre}')">  - </button> 
-                ${listaProductos[valor].cantidad} 
+            <h6> ${listaProductos[valor].cantidad} </h6> 
               <button class="boton-carrito" onclick="aumentar('${listaProductos[valor].nombre}')"> + </button>
          </td> `+
-        `<td> ${listaProductos[valor].precio} </td>`+
-        `<td> ${listaProductos[valor].total} </td>`+
+        `<td> <h6>$${listaProductos[valor].precio} </h6> </td>`+
+        `<td> <h6>$${listaProductos[valor].total} </h6> </td>`+
         `<td>  <button class="boton-carrito" onclick="eliminarProducto('${listaProductos[valor].nombre}')"> X </button> </td>`+
         `</tr>`
         total += listaProductos[valor].total;
       }
       contenidoCarritoHTML +=  `<tr>`+
-      `<td> <h3> El total de la compra es : </h3> </td>`+
-      `<td> <h3> ${total} </h3> </td>`+
+      `<td> <h5> El total de la compra es : </h5> </td>`+
+      `<td> <h5>  $${total} </h5> </td>`+
       `</tr>`
 
      contenidoCarrito.innerHTML = contenidoCarritoHTML; 
