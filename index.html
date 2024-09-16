@@ -18,7 +18,7 @@
 
     <header>
         <!-- Contenedor nav principal para la realizacion y ajuste de los estilos a traves de bootstrap y css -->
-        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(255, 255, 255,0.2)";>
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgb(255, 255, 255)";>
             <!-- Contenedor de tipo fluid para abarcar todo el ancho de la pagina -->
             <div class="container-fluid text-rigth">
                 <!-- Ancor para el titulo de la pagina y el icono de la misma -->
@@ -105,14 +105,22 @@
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col-1">
-                        <h5>Categorias</h5>
-                        
+                            <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorias
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#raquetas">Raquetas</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#ropa">Ropa</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#tenis">Tenis</a></li>
+                            </ul>
                     </div>
                     <div class="col-7">
                         <!-- Inicio Lista de productos -->
                         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-sm-1">
                             <!-- Producto 1 -->
-                            <div class="col-3">
+                            <div class="col-3" id="tenis">
                                 <img src="https://static.dafiti.com.co/p/under-armour-6985-8516062-1-catalog-new.jpg"
                                     class="card-img-top" alt="Air Jordan 4 Retro">
                                 <p class="card-text">Air Jordan 4 Retro</p>
@@ -139,7 +147,7 @@
                             </div>
 
                             <!-- Producto 4 -->
-                            <div class="col-3">
+                            <div class="col-3" id="ropa">
                                 <img src="https://img.freepik.com/fotos-premium/hombre-jugar-al-tenis_249974-1904.jpg?w=360"
                                     class="card-img-top" alt="B FLY 21">
                                 <p class="card-text">'Ropa para hombre'</p>
@@ -166,7 +174,7 @@
                             </div>
 
                             <!-- Producto 7 -->
-                            <div class="col-3">
+                            <div class="col-3" id="raquetas">
                                 <img src="https://img.freepik.com/foto-gratis/concepto-equipo-deporte-pelota-tenis-raqueta_53876-31460.jpg?t=st=1726514610~exp=1726518210~hmac=8905cc8f3cc654fbc806eba0bb930c0575791e514b58670edefdaa6c04eb4ec9&w=740"
                                     class="card-img-top" alt="B FLY 21">
                                 <p class="card-text">Raqueta para adultos color roja</p>
