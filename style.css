@@ -4,19 +4,40 @@
 
 
 /* Estilos Rafa */
+/* estilos generales del documento */
 *{
     padding: 0px;
     margin: 0px;
 
 }
+/* Altura minima del header para ponerlo arriba */
 header{
     min-height: 10vh;
 }
+/* altura minima del main para que permanezca en el centro */
 main{
     min-height: 80vh;
 }
+/* altura minima del footer para que permanezca abajo */
 footer{
     min-height: 10vh;
+}
+/* efecto hover sobre los elementos link del navegador */
+.nav-link:hover{
+    scale: 1.2;
+
+}
+/* clase para adaptar las imageneces del carrusel y darle un poco mas de estilo */
+.imagencarrusel{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8%;
+}
+/* .color-hint {
+        background: linear-gradient(blue, 10%, pink);
+      } */
+.frasecelebre{
+    text-align: center;
 }
 
 /* Estilos John */
