@@ -18,5 +18,12 @@ main{
 footer{
     min-height: 10vh;
 }
-
+.nav-link:hover{
+    scale: 1.2;
+}
+.imagencarrusel{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20%;
+}
 /* Estilos John */
