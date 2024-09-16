@@ -4,8 +4,19 @@
 
 
 /* Estilos Rafa */
+*{
+    padding: 0px;
+    margin: 0px;
 
-
-
+}
+header{
+    min-height: 10vh;
+}
+main{
+    min-height: 80vh;
+}
+footer{
+    min-height: 10vh;
+}
 
 /* Estilos John */
