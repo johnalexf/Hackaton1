@@ -24,6 +24,10 @@ footer{
 .imagencarrusel{
     object-fit: cover;
     object-position: center;
-    border-radius: 20%;
+    border-radius: 8%;
+}
+
+body{
+    background-color: rgb(104, 104, 236);
 }
 /* Estilos John */
