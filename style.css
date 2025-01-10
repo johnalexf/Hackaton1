@@ -1,73 +1,93 @@
-/* Estilos Charline */
-
-
-.productos img {
-    width: 270px;
-    height: 290px;
+.color-hint {
+  /* background: linear-gradient(rgb(233, 233, 241), 10%, rgb(95, 97, 104)); */
+    background-color: rgb(233, 233, 241);
 }
 
+nav .icono{
+    width: 27px;
+    height: 27px;
+}
+
+.navbar{
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+    transform: scale(1.2); 
+    transition: all 0.5s ease-in-out;
+}
+
+.productos img {
+  width: 270px;
+  height: 290px;
+}
 
 /* Estilos Rafa */
 /* estilos generales del documento */
-*{
-    padding: 0px;
-    margin: 0px;
-
+* {
+  padding: 0px;
+  margin: 0px;
 }
 /* Altura minima del header para ponerlo arriba */
-header{
-    min-height: 10vh;
-}
+/* header {
+  min-height: 10vh;
+} */
 /* altura minima del main para que permanezca en el centro */
-main{
-    min-height: 80vh;
+main {
+  min-height: 80vh;
 }
 /* altura minima del footer para que permanezca abajo */
-footer{
-    min-height: 10vh;
+footer {
+  min-height: 10vh;
 }
 /* efecto hover sobre los elementos link del navegador */
-.nav-link:hover{
-    scale: 1.2;
 
-}
 /* clase para adaptar las imageneces del carrusel y darle un poco mas de estilo */
-.imagencarrusel{
-    object-fit: cover;
-    object-position: center;
-    border-radius: 8%;
+.imagencarrusel {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8%;
 }
-/* .color-hint {
-        background: linear-gradient(blue, 10%, pink);
-      } */
-.frasecelebre{
-    text-align: center;
+
+.frasecelebre {
+  text-align: center;
 }
 
 /* Estilos John */
 
-td img{
-    width: 100px;
-    height: 100px;
+td img {
+  width: 100px;
+  height: 100px;
 }
 
-tr th{
-    text-align: center;
+tr th {
+  text-align: center;
 }
 
 tr td {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: auto;
-    margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: auto;
+  margin: auto;
 }
 
-.boton-carrito{
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    background-color: rgb(167, 167, 230);
-    text-align: center;
-    vertical-align: center;
+.boton-carrito {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(167, 167, 230);
+  text-align: center;
+  vertical-align: center;
+}
+
+
+@media(max-width:992px){
+    .navbar{
+        background-color: var(--bs-light);
+    }
+
+    .nav-link:hover {
+        transform: translateX(5%) scale(1); 
+    }
 }
