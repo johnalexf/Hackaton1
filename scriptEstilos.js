@@ -5,8 +5,8 @@ function navbarScroll(){
 
     window.addEventListener( 'scroll' , () => {
         window.scrollY > 50 ?
-        navbar.classList.add('bg-light'):
-        navbar.classList.remove('bg-light');
+        navbar.classList.add('bg-light','border-bottom','border-dark'):
+        navbar.classList.remove('bg-light','border-bottom','border-dark');
     })
 }
 
