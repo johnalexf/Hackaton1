@@ -28,25 +28,26 @@ nav .icono{
     padding: 0.7rem; 
 }
 
-
-
-/* .productos img {
-  width: 270px;
-  height: 290px;
-} */
-
-
-
 .card-img-top{
     aspect-ratio: 1/1;
 }
 
-/* .card-body button{
-    margin-bottom: 0;
-} */
+.text-justify{
+    text-align: justify;
+}
 
+.iconos a{
+    text-decoration: none;
+}
 
-/* Estilos John */
+i{
+    color: black;
+}
+
+.footer{
+    background-color: rgb(229, 227, 227);
+}
+
 
 td img {
   width: 100px;
