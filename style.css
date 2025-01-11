@@ -95,6 +95,6 @@ tr td {
 
 @media(max-width:576px){
     .imagencarrusel{
-        aspect-ratio: 2 / 1;  
+        aspect-ratio: 1 / 1;  
     }
 }
