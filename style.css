@@ -30,12 +30,20 @@ nav .icono{
 
 
 
-.productos img {
+/* .productos img {
   width: 270px;
   height: 290px;
+} */
+
+
+
+.card-img-top{
+    aspect-ratio: 1/1;
 }
 
-
+/* .card-body button{
+    margin-bottom: 0;
+} */
 
 
 /* Estilos John */

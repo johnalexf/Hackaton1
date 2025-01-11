@@ -96,53 +96,54 @@
           </div>
 
           <!-- contenedor principal del carrusel -->
-          <div class="container">
-            <!-- columna del carrusel con clases y propiedades para el uso de la animacion de desplazamiento continuo -->
+          <!-- columna del carrusel con clases y propiedades para el uso de la animacion de desplazamiento continuo -->
+          <div
+            id="carousel"
+            class="carousel slide carousel-dark pb-5"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+      
+            <!-- contenedor de contenedores de imágenes del carrusel -->
+            <div class="carousel-inner" >
 
-            <div
-              id="carouselExampleRide"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-        
-              <!-- contenedor de contenedores de imágenes del carrusel -->
-              <div class="carousel-inner" >
-
-                <!-- contenedores de imágenes del carrusel, con clases, y ajustes directos, frases y badge. -->
-                <div class="carousel-item active">
-                  <img
-                    class="imagencarrusel d-block w-100"
-                    src="https://t3.ftcdn.net/jpg/05/15/41/90/360_F_515419034_pbFpjmwb36PxEQRkBdcOMlTFWJ1zfIAH.jpg"
-                    alt="..."
-                  />
-                  <h2 class="fw-bold text-center text-danger">
-                    <span class="badge text-bg-danger">35%</span> de descuento en pelotas.
-                  </h2>
-                </div>
-
-                <div class="carousel-item">
-                  <img
-                    class="imagencarrusel d-block w-100"
-                    src="https://c0.wallpaperflare.com/preview/218/795/760/sport-ball-clay-court.jpg"
-                    alt="..."
-                  />
-                  <h2 class="fw-bold text-center text-danger">
-                    <span class="badge text-bg-danger">10%</span> de descuento en raquetas.
-                  </h2>
-                </div>
-
-                <div class="carousel-item">
-                  <img
-                    class="imagencarrusel d-block w-100"
-                    src="https://img.freepik.com/vector-gratis/plantilla-portada-redes-sociales-horizontales-juego-tenis_23-2149983683.jpg?t=st=1726505668~exp=1726509268~hmac=71800045e974e7dc7ec1169d397d31b5551ce695131e64728a6c0d95127c598e&w=826"
-                    alt="..."
-                  />
-                  <h2 class="fw-bold text-center text-danger">
-                    <span class="badge text-bg-danger">Descuento</span> mensualidad escuela.
-                  </h2>
-                </div>
+              <!-- contenedores de imágenes del carrusel, con clases, y ajustes directos, frases y badge. -->
+              <div class="carousel-item active">
+                <img
+                  class="imagencarrusel d-block w-100"
+                  src="https://t3.ftcdn.net/jpg/05/15/41/90/360_F_515419034_pbFpjmwb36PxEQRkBdcOMlTFWJ1zfIAH.jpg"
+                  alt="..."
+                />
+                <h2 class="fw-bold text-center text-danger">
+                  <span class="badge text-bg-danger">35%</span> de descuento en pelotas.
+                </h2>
               </div>
 
+              <div class="carousel-item">
+                <img
+                  class="imagencarrusel d-block w-100"
+                  src="https://c0.wallpaperflare.com/preview/218/795/760/sport-ball-clay-court.jpg"
+                  alt="..."
+                />
+                <h2 class="fw-bold text-center text-danger">
+                  <span class="badge text-bg-danger">10%</span> de descuento en raquetas.
+                </h2>
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  class="imagencarrusel d-block w-100"
+                  src="https://img.freepik.com/vector-gratis/plantilla-portada-redes-sociales-horizontales-juego-tenis_23-2149983683.jpg?t=st=1726505668~exp=1726509268~hmac=71800045e974e7dc7ec1169d397d31b5551ce695131e64728a6c0d95127c598e&w=826"
+                  alt="..."
+                />
+                <h2 class="fw-bold text-center text-danger">
+                  <span class="badge text-bg-danger">Descuento</span> mensualidad escuela.
+                </h2>
+              </div>
             </div>
 
           </div>
@@ -151,31 +152,21 @@
 
       <!-- productos -->
        <section class="productos" id="productos">
-          <div class="container mt-5">
+          <div class="container mt-5  text-center">
             
-            <!-- <div class="text-center mb-3">
-              <h1>PRODUCTOS</h1>
-              <hr>
-            </div> -->
-            
-            <div class="row">
-
-              <div class="col-2">
-                <h5>Categorias</h5>
-              </div>
-
-              <div class="col-10 text-center">
-                <!-- Inicio Lista de productos -->
-                <div class="row row-cols-md-2 row-cols-lg-3 row-cols-sm-1">
-                  <!-- Producto 1 -->
-                  <div class="">
-                    <img
-                      src="https://static.dafiti.com.co/p/under-armour-6985-8516062-1-catalog-new.jpg"
-                      class="card-img-top"
-                      alt="Air Jordan 4 Retro"
-                    />
-                    <p class="card-text">Air Jordan 4 Retro</p>
-                    <p class="card-text">$ 329.900</p>
+            <div class=" px-3 px-sm-auto mx-sm-auto row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-3 ">
+                  
+              <!-- Producto 1 -->
+               <div class="col">
+                <div class="card">
+                  <img
+                    src="https://static.dafiti.com.co/p/under-armour-6985-8516062-1-catalog-new.jpg"
+                    class="card-img-top"
+                    alt="Air Jordan 4 Retro"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Air Jordan 4 Retro</h5>
+                    <p class="card-text lead">$ 329.900</p>
                     <button
                       type="button"
                       class="btn btn-primary"
@@ -184,34 +175,45 @@
                       Comprar
                     </button>
                   </div>
-    
-                  <!-- Producto 2 -->
-                  <div class="">
-                    <img
-                      src="https://static.dafiti.com.co/p/under-armour-2082-2838032-1-catalog-new.jpg"
-                      class="card-img-top"
-                      alt="Under Armour Charged Verssert"
-                    />
-                    <p class="card-text">Under Armour Charged Verssert</p>
-                    <p class="card-text">$ 799.000</p>
+                </div>
+               </div>
+              
+
+              <!-- Producto 2 -->
+               <div class="col">
+                <div class="card">
+                  <img
+                    src="https://static.dafiti.com.co/p/under-armour-2082-2838032-1-catalog-new.jpg"
+                    class="card-img-top"
+                    alt="Under Armour Charged Verssert"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Under Verssert</h5>
+                    <p class="card-text lead">$ 799.000</p>
                     <button
                       type="button"
-                      class="btn btn-primary"
+                      class="btn btn-primary "
                       onclick="agregarProducto('Under Armour Charged Verssert')"
                     >
                       Comprar
                     </button>
                   </div>
-    
-                  <!-- Producto 3 -->
-                  <div class="">
-                    <img
-                      src="https://static.dafiti.com.co/p/under-armour-4238-6078852-1-catalog-new.jpg"
-                      class="card-img-top"
-                      alt="Under Armour Mega 2"
-                    />
-                    <p class="card-text">Under Armour Mega 2</p>
-                    <p class="card-text">$ 510.900</p>
+                  
+                </div>
+               </div>
+              
+
+              <!-- Producto 3 -->
+               <div class="col">
+                <div class="card">
+                  <img
+                    src="https://static.dafiti.com.co/p/under-armour-4238-6078852-1-catalog-new.jpg"
+                    class="card-img-top"
+                    alt="Under Armour Mega 2"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Under Armour Mega 2</h5>
+                    <p class="card-text lead">$ 510.900</p>
                     <button
                       type="button"
                       class="btn btn-primary"
@@ -220,16 +222,21 @@
                       Comprar
                     </button>
                   </div>
-    
-                  <!-- Producto 4 -->
-                  <div class="">
-                    <img
-                      src="https://img.freepik.com/fotos-premium/hombre-jugar-al-tenis_249974-1904.jpg?w=360"
-                      class="card-img-top"
-                      alt="B FLY 21"
-                    />
-                    <p class="card-text">Ropa para hombre</p>
-                    <p class="card-text">$ 128.000</p>
+                </div>
+               </div>
+              
+
+              <!-- Producto 4 -->
+               <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/fotos-premium/hombre-jugar-al-tenis_249974-1904.jpg?w=360"
+                    class="card-img-top"
+                    alt="B FLY 21"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Ropa para hombre</h5>
+                    <p class="card-text lead">$ 128.000</p>
                     <button
                       type="button"
                       class="btn btn-primary"
@@ -238,16 +245,21 @@
                       Comprar
                     </button>
                   </div>
-    
-                  <!-- Producto 5 -->
-                  <div class="">
-                    <img
-                      src="https://img.freepik.com/foto-gratis/retrato-hermosa-mujer-jugando-tenis_23-2148290274.jpg?t=st=1726514897~exp=1726518497~hmac=42defc092ca862505d3e75818fb3d41a3a0dbe04e638522daf08e777228ef4ee&w=360"
-                      class="card-img-top"
-                      alt="B FLY 21"
-                    />
-                    <p class="card-text">Ropa para mujer</p>
-                    <p class="card-text">$ 147.000</p>
+                </div>
+               </div>
+             
+
+              <!-- Producto 5 -->
+               <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/foto-gratis/retrato-hermosa-mujer-jugando-tenis_23-2148290274.jpg?t=st=1726514897~exp=1726518497~hmac=42defc092ca862505d3e75818fb3d41a3a0dbe04e638522daf08e777228ef4ee&w=360"
+                    class="card-img-top"
+                    alt="B FLY 21"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Ropa para mujer</h5>
+                    <p class="card-text lead">$ 147.000</p>
                     <button
                       type="button"
                       class="btn btn-primary"
@@ -256,16 +268,21 @@
                       Comprar
                     </button>
                   </div>
-    
-                  <!-- Producto 6 -->
-                  <div class="">
-                    <img
-                      src="https://img.freepik.com/foto-gratis/primer-plano-nina-tenencia-badminton_23-2147904650.jpg?t=st=1726514878~exp=1726518478~hmac=ca17922a2da50381bab2ca865546d9df99c3e0dc78ebe6ebe302102d96593564&w=740"
-                      class="card-img-top"
-                      alt="B FLY 21"
-                    />
-                    <p class="card-text">Ropa para niñas</p>
-                    <p class="card-text">$ 98.000</p>
+                </div>
+               </div>
+              
+
+              <!-- Producto 6 -->
+               <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/foto-gratis/primer-plano-nina-tenencia-badminton_23-2147904650.jpg?t=st=1726514878~exp=1726518478~hmac=ca17922a2da50381bab2ca865546d9df99c3e0dc78ebe6ebe302102d96593564&w=740"
+                    class="card-img-top"
+                    alt="B FLY 21"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Ropa para niñas</h5>
+                    <p class="card-text lead">$ 98.000</p>
                     <button
                       type="button"
                       class="btn btn-primary"
@@ -274,16 +291,21 @@
                       Comprar
                     </button>
                   </div>
-    
-                  <!-- Producto 7 -->
-                  <div class="">
-                    <img
-                      src="https://img.freepik.com/foto-gratis/concepto-equipo-deporte-pelota-tenis-raqueta_53876-31460.jpg?t=st=1726514610~exp=1726518210~hmac=8905cc8f3cc654fbc806eba0bb930c0575791e514b58670edefdaa6c04eb4ec9&w=740"
-                      class="card-img-top"
-                      alt="B FLY 21"
-                    />
-                    <p class="card-text">Raqueta para adultos color roja</p>
-                    <p class="card-text">$ 321.000</p>
+                </div>
+               </div>
+              
+
+              <!-- Producto 7 -->
+               <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/foto-gratis/concepto-equipo-deporte-pelota-tenis-raqueta_53876-31460.jpg?t=st=1726514610~exp=1726518210~hmac=8905cc8f3cc654fbc806eba0bb930c0575791e514b58670edefdaa6c04eb4ec9&w=740"
+                    class="card-img-top"
+                    alt="B FLY 21"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Raqueta roja</h5>
+                    <p class="card-text lead">$ 321.000</p>
                     <button
                       type="button"
                       class="btn btn-primary"
@@ -291,17 +313,22 @@
                     >
                       Comprar
                     </button>
-                  </div>
-    
-                  <!-- Producto 8 -->
-                  <div class="">
-                    <img
-                      src="https://img.freepik.com/foto-gratis/pelota-amarilla-acostado-tenis-raqueta_23-2147829466.jpg?t=st=1726514579~exp=1726518179~hmac=5e3bb9ef2b5eeef6678f490fed7ddad3de0e815a9da202a9ab1b5a7e116ac90f&w=740"
-                      class="card-img-top"
-                      alt="B FLY 21"
-                    />
-                    <p class="card-text">Raqueta para adultos color amarilla</p>
-                    <p class="card-text">$ 321.000</p>
+                  </div> 
+                </div>
+               </div>
+              
+
+              <!-- Producto 8 -->
+               <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/foto-gratis/pelota-amarilla-acostado-tenis-raqueta_23-2147829466.jpg?t=st=1726514579~exp=1726518179~hmac=5e3bb9ef2b5eeef6678f490fed7ddad3de0e815a9da202a9ab1b5a7e116ac90f&w=740"
+                    class="card-img-top"
+                    alt="B FLY 21"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-ttitle">Raqueta amarilla</h5>
+                    <p class="card-text lead">$ 321.000</p>
                     <button
                       type="button"
                       class="btn btn-primary"
@@ -309,17 +336,22 @@
                     >
                       Comprar
                     </button>
-                  </div>
-    
-                  <!-- Producto 9 -->
-                  <div class="">
-                    <img
-                      src="https://img.freepik.com/foto-gratis/raquetas-badminton-alto-angulo-campo_23-2149733001.jpg?t=st=1726514542~exp=1726518142~hmac=61653d6d329c95ded496be830c2736438a0da84c5a00d626d10c5bdeb94f05a8&w=360"
-                      class="card-img-top"
-                      alt="B FLY 21"
-                    />
-                    <p class="card-text">Raqueta para niños</p>
-                    <p class="card-text">$ 150.000</p>
+                  </div> 
+                </div>
+               </div>
+              
+
+              <!-- Producto 9 -->
+               <div class="col">
+                <div class="card">
+                  <img
+                    src="https://img.freepik.com/foto-gratis/raquetas-badminton-alto-angulo-campo_23-2149733001.jpg?t=st=1726514542~exp=1726518142~hmac=61653d6d329c95ded496be830c2736438a0da84c5a00d626d10c5bdeb94f05a8&w=360"
+                    class="card-img-top"
+                    alt="B FLY 21"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Raqueta para niños</h5>
+                    <p class="card-text lead">$ 150.000</p>
                     <button
                       type="button"
                       class="btn btn-primary"
@@ -328,12 +360,13 @@
                       Comprar
                     </button>
                   </div>
-    
-                  <!-- Fin Lista de productos-->
                 </div>
-              </div>
+               </div>
+              
 
+              <!-- Fin Lista de productos-->
             </div>
+
           </div>
        </section>
 
