@@ -36,6 +36,16 @@ nav .icono{
     text-align: justify;
 }
 
+
+.carrito img{
+    width: 100px;
+    height: 100px;
+}
+
+.botonesCarrito i{
+    font-size: 1.5rem;
+}
+
 .iconos a{
     text-decoration: none;
 }
@@ -49,22 +59,6 @@ i{
 }
 
 
-td img {
-  width: 100px;
-  height: 100px;
-}
-
-tr th {
-  text-align: center;
-}
-
-tr td {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: auto;
-  margin: auto;
-}
 
 .boton-carrito {
   border-radius: 50%;

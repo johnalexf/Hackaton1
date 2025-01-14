@@ -211,7 +211,7 @@
                     <button
                       type="button"
                       class="btn btn-primary"
-                      onclick="agregarProducto('Air Jordan 4 Retro')"
+                      onclick="agregarProducto(0)"
                     >
                       Comprar
                     </button>
@@ -235,7 +235,7 @@
                     <button
                       type="button"
                       class="btn btn-primary"
-                      onclick="agregarProducto('Air Jordan 4 Retro')"
+                      onclick="agregarProducto(1)"
                     >
                       Comprar
                     </button>
@@ -259,7 +259,7 @@
                     <button
                       type="button"
                       class="btn btn-primary"
-                      onclick="agregarProducto('Air Jordan 4 Retro')"
+                      onclick="agregarProducto(2)"
                     >
                       Comprar
                     </button>
@@ -283,7 +283,7 @@
                     <button
                       type="button"
                       class="btn btn-primary"
-                      onclick="agregarProducto('Air Jordan 4 Retro')"
+                      onclick="agregarProducto(3)"
                     >
                       Comprar
                     </button>
@@ -307,7 +307,7 @@
                     <button
                       type="button"
                       class="btn btn-primary"
-                      onclick="agregarProducto('Air Jordan 4 Retro')"
+                      onclick="agregarProducto(4)"
                     >
                       Comprar
                     </button>
@@ -331,7 +331,7 @@
                     <button
                       type="button"
                       class="btn btn-primary"
-                      onclick="agregarProducto('Air Jordan 4 Retro')"
+                      onclick="agregarProducto(5)"
                     >
                       Comprar
                     </button>
@@ -355,7 +355,7 @@
                     <button
                       type="button"
                       class="btn btn-primary"
-                      onclick="agregarProducto('Air Jordan 4 Retro')"
+                      onclick="agregarProducto(6)"
                     >
                       Comprar
                     </button>
@@ -379,7 +379,7 @@
                     <button
                       type="button"
                       class="btn btn-primary"
-                      onclick="agregarProducto('Air Jordan 4 Retro')"
+                      onclick="agregarProducto(7)"
                     >
                       Comprar
                     </button>
@@ -403,7 +403,7 @@
                     <button
                       type="button"
                       class="btn btn-primary"
-                      onclick="agregarProducto('Air Jordan 4 Retro')"
+                      onclick="agregarProducto(8)"
                     >
                       Comprar
                     </button>
@@ -417,37 +417,54 @@
         </div>
       </section>
 
-      <!-- <div class="container carritoCompras">
-        <div class="row">
-          <div class="col-2"></div>
-          <div class="col">
-            <h3>Carrito de compras</h3>
-            <hr />
-          </div>
-          <div class="col-2"></div>
-        </div>
+      <!-- carrito -->
+      <section class="carrito">
+        <div class="container carritoCompras mt-5">
 
-        <div class="row">
-          <div class="col-2"></div>
-          <div class="col">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col"><h5>Producto</h5></th>
-                  <th scope="col"><h5>cantidad</h5></th>
-                  <th scope="col"><h5>precio/und</h5></th>
-                  <th scope="col"><h5>total</h5></th>
-                  <th scope="col"><h5>eliminar</h5></th>
-                </tr>
-              </thead>
-              <tbody id="contenidoCarrito">
-                <!-- Aqui entra a rellenar javascript 
-              </tbody>
-            </table>
+          <div class="row">
+            <div class="col text-center">
+              <h3 class="text-uppercase">Carrito de compras</h3>
+              <hr />
+            </div>
           </div>
-          <div class="col-2"></div>
+  
+          <div class="row ">
+
+            <div class="col-12 text-center">
+              <h5> Nombre del producto </h5>
+            </div>
+
+            <div class="col-6 text-end">
+              <img src="https://img.freepik.com/foto-gratis/concepto-equipo-deporte-pelota-tenis-raqueta_53876-31460.jpg?t=st=1726514610~exp=1726518210~hmac=8905cc8f3cc654fbc806eba0bb930c0575791e514b58670edefdaa6c04eb4ec9&w=740" ,
+               alt="">
+            </div>
+
+            <div class="col-6">
+              <div class="d-flex flex-column justify-content-between">
+
+                <div class="botonesCarrito">
+                  
+                  <i class="fa-solid fa-circle-minus"></i>
+                  <input type="number" disabled placeholder="1">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </div>
+
+                <div class="subtotal">
+                  <p class="lead fw-bold">
+                    $15000
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          
         </div>
-      </div> -->
+      </section>
+     
+
     </main>
 
     <footer  class="footer mt-3">
@@ -464,18 +481,18 @@
               <div class="">
                 <h6 class="fw-bold">Nuestra pasión por el tenis:</h6>
                 <p>
-                  "Creemos que el tenis es más que un deporte, es un estilo de
+                  Creemos que el tenis es más que un deporte, es un estilo de
                   vida. Por eso, en Tcompra encontrarás todo lo que necesitas para
-                  mejorar tu juego y disfrutar de cada partido."
+                  mejorar tu juego y disfrutar de cada partido.
                 </p>
               </div>
               <div>
                 <h6 class="fw-bold">Nuestra historia:</h6>
                 <p >
-                  "Tcompra nació de la pasión de un grupo de amigos por el tenis.
+                  Tcompra nació de la pasión de un grupo de amigos por el tenis.
                   Queríamos crear un espacio donde todos los amantes de este
                   deporte pudieran encontrar todo lo que necesitan para disfrutar
-                  al máximo."
+                  al máximo.
                 </p>
               </div>
             </div>
@@ -585,7 +602,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
     <script src="scriptEstilos.js"></script>
     <script src="https://kit.fontawesome.com/9dcaa44f46.js" crossorigin="anonymous"></script>
   </body>
