@@ -62,8 +62,10 @@ nav .icono {
     text-align: start;
 }
 
-
-
+.carrito img {
+    width: 100px;
+    height: 100px;
+  }
 
 
 /* Se oculta el titulo del producto ya que existe un nombre de imagen
@@ -73,19 +75,25 @@ para pantallas mas pequeñas */
   display: none;
 }
 
-.carrito img {
-  width: 100px;
-  height: 100px;
+input:disabled{
+    background-color: white;
 }
 
-.cantidadCarrito i {
-  font-size: 1.5rem;
+.cantidadCarrito i, .cantidadCarrito input {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: black;
 }
 
 .cantidadCarrito input {
   width: 50px;
   text-align: center;
 }
+
+.cantidadCarrito button:focus{
+    background-color: rgb(182, 182, 189);
+}
+
 
 /* Estilos del contenido del footer */
 .footer {

@@ -35,6 +35,7 @@ export class listaProductos {
 
       this.productos.push(productoAgregar);
       this.actualizarTotal();
+
       console.log("producto agregado correctamente al carrito")
       return true;
 
@@ -49,18 +50,26 @@ export class listaProductos {
   sumarCantidad(id) {
     const producto = this.encontrarProducto(id);
 
-    producto ? 
-    producto.cantidad++ : 
-    console.log("producto no encontrado");
+    if(producto){
+      producto.cantidad++;
+      producto.subtotal = producto.cantidad * producto.precio;
+    }else{
+      console.log("producto no encontrado");
+    }
+    
   }
 
   restarCantidad(id) {
     const producto = this.encontrarProducto(id);
 
     if (producto) {
-        producto.cantidad > 1 ? 
-            producto.cantidad-- :
-            alert("seguro desea eliminar el producto")
+      if(producto.cantidad > 1){
+        producto.cantidad--;
+        producto.subtotal = producto.cantidad * producto.precio;
+      }else{
+        alert('seguro desea eliminar el producto')
+      }
+      
 
         this.actualizarTotal();
     } else {
@@ -77,11 +86,54 @@ export class listaProductos {
 
   construirHTML(){
     let carritoHTML = ``;
-    this.listaProductos.forEach(
+  
+    console.log()
+  
+    this.productos.forEach(
         producto =>{
+          carritoHTML += `
+          <div class="filaCarrito ">
+  
+            <div class="imagenProducto">
+              <div>
+                <img
+                src=${producto.img}
+                ,
+                alt=${producto.nombre}
+                />
+              </div>
+              <h5 class="nombreImagenProducto">${producto.nombre}</h5>
+            </div>
             
-
+            <div class="tituloProducto">
+              <h5>${producto.nombre}</h5>
+            </div>
+  
+            <div class="precioProducto">
+              <p class="lead fw-bold">$${producto.precio.toLocaleString()}</p>
+            </div>
+  
+            <div class="cantidadCarrito d-flex">
+              <div class="input-group ">
+                <button class="btn" onclick="disminuirCantidadProducto(${producto.id})">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <input type="text"  value="${producto.cantidad}" disabled/>
+                <button class="btn" onclick="aumentarCantidadProducto(${producto.id})">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+  
+            <div class="totalProducto">
+              <p class="lead fw-bold">$${producto.subtotal.toLocaleString()}</p>
+            </div>
+  
+          </div>
+          `
+  
         }
     );
+    return carritoHTML;
   }
 }
