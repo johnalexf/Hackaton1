@@ -1,87 +1,107 @@
+/* color de fondo para el body */
 .color-hint {
   /* background: linear-gradient(rgb(233, 233, 241), 10%, rgb(95, 97, 104)); */
-    background-color: rgb(233, 233, 241);
+  background-color: rgb(233, 233, 241);
 }
 
-nav .icono{
-    width: 27px;
-    height: 27px;
+/* Estilos para el navbar */
+nav .icono {
+  width: 27px;
+  height: 27px;
 }
 
-.navbar{
-    transition: all 0.5s ease-in-out;
-    opacity: 0.92;
+.navbar {
+  transition: all 0.5s ease-in-out;
+  opacity: 0.92;
 }
-
 
 /* efecto hover sobre los elementos link del navegador */
 .nav-link:hover {
-    transform: scale(1.2); 
-    transition: all 0.5s ease-in-out;
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
 }
 
-/* clase para adaptar las imágenes del carrusel y darle un poco mas de estilo */
+/* Estilos para las imágenes del carrusel*/
 .imagencarrusel {
-    padding: 20px 0%;
-    aspect-ratio: 3 / 1;  
-    border-radius: 3rem;
-    padding: 0.7rem; 
+  padding: 20px 0%;
+  aspect-ratio: 3 / 1;
+  border-radius: 3rem;
+  padding: 0.7rem;
 }
 
-.card-img-top{
-    aspect-ratio: 1/1;
+/* Estilos para las tarjetas de los productos */
+.card-img-top {
+  aspect-ratio: 1/1;
 }
 
-.text-justify{
-    text-align: justify;
-}
-
-.carrito .filaCarrito{
-    display: grid;
-    grid-template-columns: 2fr repeat(3,1fr);
-    padding: 10px 0;
-    border-bottom: 1px solid #21252959;
-}
-
-.filaCarrito div{
-    width: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.filaCarrito .tituloProducto{
-    display: none;
-}
-
-.carrito img{
-    width: 100px;
-    height: 100px;
-}
-
-.cantidadCarrito i{
-    font-size: 1.5rem;
-}
-
-.cantidadCarrito input{
-    width: 50px;
-    text-align: center;
-}
-
-.iconos a{
-    text-decoration: none;
-}
-
-i{
-    color: black;
-}
-
-.footer{
-    background-color: rgb(229, 227, 227);
+/* Estilos para la tabla de productos agregados al carrito */
+.carrito .filaCarrito {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  padding: 10px 0;
+  border-bottom: 1px solid #21252959;
 }
 
 
+.filaCarrito div {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagenProducto div{
+    width: 50%;
+    padding-right: 20px;
+    justify-content: end;
+}
+
+.imagenProducto h5{
+    width: 50%;
+    text-align: start;
+}
+
+
+
+
+
+/* Se oculta el titulo del producto ya que existe un nombre de imagen
+que contiene el titulo, esto con el fin de poder establecer un orden mas adecuado 
+para pantallas mas pequeñas */
+.filaCarrito .tituloProducto {
+  display: none;
+}
+
+.carrito img {
+  width: 100px;
+  height: 100px;
+}
+
+.cantidadCarrito i {
+  font-size: 1.5rem;
+}
+
+.cantidadCarrito input {
+  width: 50px;
+  text-align: center;
+}
+
+/* Estilos del contenido del footer */
+.footer {
+  background-color: rgb(229, 227, 227);
+}
+
+.text-justify {
+  text-align: justify;
+}
+.iconos a {
+  text-decoration: none;
+}
+
+i {
+  color: black;
+}
 
 .boton-carrito {
   border-radius: 50%;
@@ -92,60 +112,77 @@ i{
   vertical-align: center;
 }
 
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
 
-@media(max-width:992px){
+  .navbar {
+    background-color: var(--bs-light);
+  }
 
-    html {
-        font-size: 14px; 
-    }
-
-    .navbar{
-        background-color: var(--bs-light);
-    }
-
-    .nav-link:hover {
-        transform: translateX(5%) scale(1); 
-    }
-
-    
+  .nav-link:hover {
+    transform: translateX(5%) scale(1);
+  }
 }
 
-@media(max-width: 768px ){
+@media (max-width: 768px) {
+  #tituloTablaCarrito,
+  .imagenProducto .nombreImagenProducto,
+  .filaCarrito .precioProducto {
+    display: none;
+  }
 
-    #tituloTablaCarrito,
-    .imagenProducto .nombreImagenProducto,
-    .filaCarrito .precioProducto{
-        display: none ; 
-    }
+  .filaCarrito .tituloProducto {
+    display: flex;
+  }
 
+  .carrito .filaCarrito {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .filaCarrito .imagenProducto {
+    grid-row: 1 / 4;
+  }
+
+  .carrito img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .imagenProducto div{
+    width: 100%;
+    padding-right: 0;
+    justify-content: center;
+
+  }
+}
+
+@media (max-width: 576px) {
+  .imagencarrusel {
+    aspect-ratio: 1 / 1;
+  }
+  .carrito img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 300px) {
    
-
-    .filaCarrito .tituloProducto{
-        display: flex;
+    .carrito img {
+      width: 100px;
+      height: 120px;
     }
 
-    
-    .carrito .filaCarrito{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3,1fr);
-    }
+    .carrito .filaCarrito {
+        grid-template-columns: 1fr 3fr;
+      }
 
-    .filaCarrito .imagenProducto{
-        grid-row: 1 / 4;
-    }
-    
-    .carrito img{
-        width: 200px;
-        height: 200px;
-    }
-    
-    
+  }
 
-}
 
-@media(max-width:576px){
-    .imagencarrusel{
-        aspect-ratio: 1 / 1;  
-    }
-}
+
+
