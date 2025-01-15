@@ -23,7 +23,6 @@
   </head>
 
   <body class="color-hint">
-
     <header>
       <!-- Contenedor nav principal para la realización y ajuste de los estilos a traves de bootstrap y css -->
       <nav class="navbar navbar-expand-lg fixed-top">
@@ -55,7 +54,6 @@
 
           <!-- contenedor de la barra collapsable -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
             <!-- tabla del nav con sus items -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item ms-3">
@@ -101,7 +99,6 @@
     </header>
 
     <main>
-
       <!-- promociones del mes -->
       <section class="promociones mt-5 pt-5">
         <!-- badge promocional -->
@@ -427,80 +424,111 @@
               <hr />
             </div>
           </div>
-  
-          <div class="row ">
 
-            <div class="col-12 text-center">
-              <h5> Nombre del producto </h5>
+          <div class="filaCarrito" id="tituloTablaCarrito">
+
+            <div class="imagenProducto">
+              <h4>Producto</h4>
+            </div>
+            
+            <!-- <div class="tituloProducto bg-primary">
+              <h5>Nombre del producto</h5>
+            </div> -->
+
+            <div class="precioProducto">
+              <h4>Precio</h4>
             </div>
 
-            <div class="col-6 text-end">
-              <img src="https://img.freepik.com/foto-gratis/concepto-equipo-deporte-pelota-tenis-raqueta_53876-31460.jpg?t=st=1726514610~exp=1726518210~hmac=8905cc8f3cc654fbc806eba0bb930c0575791e514b58670edefdaa6c04eb4ec9&w=740" ,
-               alt="">
+            <div class="cantidadCarrito">
+              <h4>Cantidad</h4>
             </div>
 
-            <div class="col-6">
-              <div class="d-flex flex-column justify-content-between">
-
-                <div class="botonesCarrito">
-                  
-                  <i class="fa-solid fa-circle-minus"></i>
-                  <input type="number" disabled placeholder="1">
-                  <i class="fa-solid fa-circle-plus"></i>
-                </div>
-
-                <div class="subtotal">
-                  <p class="lead fw-bold">
-                    $15000
-                  </p>
-                </div>
-
-              </div>
+            <div class="totalProducto">
+              <h4>Subtotal</h4>
             </div>
 
           </div>
 
-          
+         
+
+          <div class="filaCarrito ">
+
+            <div class="imagenProducto">
+              <img
+              src="https://img.freepik.com/foto-gratis/concepto-equipo-deporte-pelota-tenis-raqueta_53876-31460.jpg?t=st=1726514610~exp=1726518210~hmac=8905cc8f3cc654fbc806eba0bb930c0575791e514b58670edefdaa6c04eb4ec9&w=740"
+              ,
+              alt=""
+              />
+              <h5 class="nombreImagenProducto">Nombre del producto</h5>
+            </div>
+            
+            <div class="tituloProducto">
+              <h5>Nombre del producto</h5>
+            </div>
+
+            <div class="precioProducto">
+              <p class="lead fw-bold">$15000</p>
+            </div>
+
+            <div class="bg-secondary cantidadCarrito d-flex">
+              <div>
+                <button class="btn">
+                  <i class="fa-solid fa-circle-minus"></i>
+                </button>
+                <input type="number" disabled placeholder="1" />
+                <button class="btn">
+                  <i class="fa-solid fa-circle-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="totalProducto">
+              <p class="lead fw-bold">$15000</p>
+            </div>
+
+          </div>
+
+
         </div>
+
       </section>
-     
 
     </main>
 
-    <footer  class="footer mt-3">
+    <footer class="footer mt-3">
       <div class="container">
         <div class="row">
-
-          
           <!-- Acerca de  -->
           <div id="conocenos" class="col-12 col-lg-4 mt-4">
             <h5 class="text-center">Acerca de Nosotros</h5>
             <hr />
 
-            <div class="text-justify ">
+            <div class="text-justify">
               <div class="">
                 <h6 class="fw-bold">Nuestra pasión por el tenis:</h6>
                 <p>
                   Creemos que el tenis es más que un deporte, es un estilo de
-                  vida. Por eso, en Tcompra encontrarás todo lo que necesitas para
-                  mejorar tu juego y disfrutar de cada partido.
+                  vida. Por eso, en Tcompra encontrarás todo lo que necesitas
+                  para mejorar tu juego y disfrutar de cada partido.
                 </p>
               </div>
               <div>
                 <h6 class="fw-bold">Nuestra historia:</h6>
-                <p >
+                <p>
                   Tcompra nació de la pasión de un grupo de amigos por el tenis.
                   Queríamos crear un espacio donde todos los amantes de este
-                  deporte pudieran encontrar todo lo que necesitan para disfrutar
-                  al máximo.
+                  deporte pudieran encontrar todo lo que necesitan para
+                  disfrutar al máximo.
                 </p>
               </div>
             </div>
           </div>
 
           <!-- formulario de contacto -->
-          <div id="contactenos" class="col-12 col-sm-6 col-lg-4 text-center h-auto mt-4">
-
+          <div
+            id="contactenos"
+            class="col-12 col-sm-6 col-lg-4 text-center h-auto mt-4"
+          >
             <div>
               <h5>Contáctenos</h5>
             </div>
@@ -538,7 +566,6 @@
                 </div>
               </form>
             </div>
-
           </div>
 
           <div class="col-12 col-sm-6 col-lg-4 mt-4">
@@ -561,18 +588,17 @@
               <p>Sab - Dom de 9am - 5pm</p>
             </div>
           </div>
-
-          
         </div>
 
         <hr />
 
-        <div class="row my-1 ">
-
+        <div class="row my-1">
           <div class="iconos col-12 col-sm-6">
-            <div class="d-flex justify-content-center justify-content-sm-start gap-3">
-              <p>Síguenos: </p>  
-              <a href="" >
+            <div
+              class="d-flex justify-content-center justify-content-sm-start gap-3"
+            >
+              <p>Síguenos:</p>
+              <a href="">
                 <i class="fab fa-facebook fa-2x"></i>
               </a>
               <a href="">
@@ -586,14 +612,10 @@
 
           <div class="col-12 col-sm-6">
             <div class="text-center text-sm-end">
-              <p> Copyright &copy; TCompra 2025</p>
+              <p>Copyright &copy; TCompra 2025</p>
             </div>
-            
           </div>
-
-          
         </div>
-
       </div>
     </footer>
 
@@ -604,6 +626,9 @@
     ></script>
     <script src="script.js" type="module"></script>
     <script src="scriptEstilos.js"></script>
-    <script src="https://kit.fontawesome.com/9dcaa44f46.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/9dcaa44f46.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
