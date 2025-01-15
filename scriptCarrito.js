@@ -68,8 +68,9 @@ export class listaProductos {
         producto.cantidad--;
         producto.subtotal = producto.cantidad * producto.precio;
         this.actualizarTotal();
+        return true;
       }else{
-        alert('seguro desea eliminar el producto')
+        return false;
       }
       
 
