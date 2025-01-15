@@ -417,7 +417,6 @@
       <!-- carrito -->
       <section class="carrito">
         <div class="container carritoCompras my-5 py-5">
-
           <div class="row">
             <div class="col text-center">
               <h3 class="text-uppercase">Carrito de compras</h3>
@@ -425,12 +424,21 @@
             </div>
           </div>
 
-          <div class="filaCarrito" id="tituloTablaCarrito">
+          <div class="carritoVacio mt-4">
+            <p class="text-center display-6 ">
+              ¡Tu carrito está vacío!
+            </p>
+            <p class="text-center display-6 ">
+              Explora nuestro catálogo y encuentra los
+              productos que más te gusten.
+            </p>
+          </div>
 
+          <div class="filaCarrito d-none" id="tituloTablaCarrito">
             <div class="imagenProducto">
               <h4>Producto</h4>
             </div>
-            
+
             <!-- <div class="tituloProducto bg-primary">
               <h5>Nombre del producto</h5>
             </div> -->
@@ -446,13 +454,13 @@
             <div class="totalProducto">
               <h4>Subtotal</h4>
             </div>
-
           </div>
 
           <div id="armadoCarritoScript">
             <!-- esta sección se arma con el script.js -->
           </div>
 
+          
 
           <!-- <div class="filaCarrito ">
 
@@ -545,11 +553,8 @@
               </p>
             </div>
           </div> -->
-
         </div>
-
       </section>
-
     </main>
 
     <footer class="footer mt-3">

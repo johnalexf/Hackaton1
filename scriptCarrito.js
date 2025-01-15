@@ -16,6 +16,11 @@ export class listaProductos {
     this.total = 0;
   }
 
+
+  listaVacia(){
+    return !this.productos.length;
+  }
+
   actualizarTotal() {
     this.total = 0;
     this.productos.forEach((producto) => (this.total += producto.subtotal));
@@ -95,7 +100,7 @@ export class listaProductos {
     this.productos.forEach(
         producto =>{
           carritoHTML += `
-          <div class="filaCarrito ">
+          <div class="filaCarrito d-grid ">
   
             <div class="imagenProducto">
               <div>
@@ -128,7 +133,7 @@ export class listaProductos {
               </div>
             </div>
   
-            <div class="totalProducto">
+            <div class="totalProducto ">
               <p class="lead fw-bold">$${producto.subtotal.toLocaleString()}</p>
             </div>
   
@@ -138,7 +143,7 @@ export class listaProductos {
         }
     );
     carritoHTML += `
-      <div class="filaCarrito">
+      <div class="filaCarrito d-grid">
         <div></div>
         <div></div>
         <div>

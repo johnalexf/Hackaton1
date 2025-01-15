@@ -12,12 +12,25 @@ let contenidoCarrito = document.querySelector("#armadoCarritoScript");
 let listaCompras = new listaProductos();
 
 
+let carritoVacio  = document.querySelector('.carritoVacio');
+
+let filaCarrito = document.querySelector('.filaCarrito');
 
 // función para modificar el contenido de la tabla de compras
 export function agregarProducto(idProductoAgregar) {
 
   
   if(!isNaN( parseInt(idProductoAgregar))){
+
+
+
+    if(listaCompras.listaVacia()){
+      carritoVacio.style.display  = "none";
+      filaCarrito.classList.remove("d-none");
+      filaCarrito.classList.add("d-grid");
+
+    }
+  
 
     // creación de un nuevo producto adicionando la cantidad
     let producto = new productoCarrito(
@@ -65,7 +78,16 @@ export function disminuirCantidadProducto(id) {
     listaCompras.eliminar(id);
   }
   
-  actualizarCarrito();
+  if(listaCompras.listaVacia()){
+    carritoVacio.style.display  = "block";
+    filaCarrito.classList.remove("d-grid");
+    filaCarrito.classList.add("d-none");
+    contenidoCarrito.innerHTML = "";
+  }else{
+    actualizarCarrito();
+  }
+  
+
 }
 
 window.disminuirCantidadProducto = disminuirCantidadProducto;
