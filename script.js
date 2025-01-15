@@ -57,7 +57,14 @@ export function aumentarCantidadProducto(id) {
 window.aumentarCantidadProducto = aumentarCantidadProducto;
 
 export function disminuirCantidadProducto(id) {
-  listaCompras.restarCantidad(id);
+
+  // La función restar cantidad retorna un falso si la cantidad es uno
+  // Entonces se confirma al usuario si desea eliminar el producto
+  if(!listaCompras.restarCantidad(id)){
+    alert('seguro desea eliminar el producto')
+    listaCompras.eliminar(id);
+  }
+  
   actualizarCarrito();
 }
 
