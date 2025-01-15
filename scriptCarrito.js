@@ -53,6 +53,7 @@ export class listaProductos {
     if(producto){
       producto.cantidad++;
       producto.subtotal = producto.cantidad * producto.precio;
+      this.actualizarTotal();
     }else{
       console.log("producto no encontrado");
     }
@@ -66,6 +67,7 @@ export class listaProductos {
       if(producto.cantidad > 1){
         producto.cantidad--;
         producto.subtotal = producto.cantidad * producto.precio;
+        this.actualizarTotal();
       }else{
         alert('seguro desea eliminar el producto')
       }
@@ -134,6 +136,20 @@ export class listaProductos {
   
         }
     );
+    carritoHTML += `
+      <div class="filaCarrito">
+        <div></div>
+        <div></div>
+        <div>
+          <h5>Total pedido</h5>
+        </div>
+        <div>
+          <p class="lead fw-bold">
+            $${this.total.toLocaleString()}
+          </p>
+        </div>
+       </div>
+    `
     return carritoHTML;
   }
 }
