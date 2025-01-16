@@ -1,6 +1,6 @@
 // variable para guardar lista de productos disponibles con nombre, imagen y precio.
-import { productosDisponibles } from "./listProductos.js";
-import { productoCarrito , listaProductos } from "./scriptCarrito.js";
+import { productosDisponibles } from "../js/listProductos.js";
+import { productoCarrito , listaProductos } from "../js/scriptCarrito.js";
 
 console.log(productosDisponibles);
 
