@@ -70,7 +70,8 @@ nav .icono {
 .carrito .filaCarrito {
   position: relative;
   grid-template-columns: 2fr repeat(3, 1fr);
-  padding: 10px 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #21252959;
 }
 
