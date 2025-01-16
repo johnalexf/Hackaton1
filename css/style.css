@@ -11,9 +11,8 @@
   bottom: 30px;
   width: 3rem;
   height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 3px;
+  text-align: center;
   background: 
   linear-gradient(rgba(222, 224, 228, 0.897),rgba(207, 210, 218, 0.836)),
   url(https://cdn-icons-png.flaticon.com/128/523/523686.png) center center no-repeat;
@@ -28,7 +27,7 @@
 }
 
 .linkCarrito a{
-  color: rgb(50, 50, 50);
+  color: rgb(60, 60, 60);
   font-size: 1.8rem;
 }
 
