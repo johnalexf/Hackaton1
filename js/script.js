@@ -10,16 +10,25 @@ import * as alertas from "../js/scriptAlertas.js";
 //variable para poder modificar el contenido del carrito
 let contenidoCarrito = document.querySelector("#armadoCarritoScript");
 
-// creación de un objeto de la clase listaProductos la cual contiene las funciones
-// necesarias para poder interactuar con los productos almacenados en la lista de compras
-let listaCompras = new listaProductos();
-
 //contenedor del mensaje que informa que el carrito esta vació
 let carritoVacio = document.querySelector(".carritoVacio");
 
 // primera fila del carrito la cual representa los títulos de la tabla,
 //  con el fin de ocultarla para pantallas pequeñas
 let filaCarrito = document.querySelector(".filaCarrito");
+
+// lista de compras almacenada en local storage
+let listaComprasJSON = JSON.parse(localStorage.getItem('listaCompras'));
+
+// creación de un objeto de la clase listaProductos la cual contiene las funciones
+// necesarias para poder interactuar con los productos almacenados en la lista de compras
+let listaCompras = new listaProductos();
+
+if(listaComprasJSON){
+  listaCompras.recuperarDeLocalStorage(listaComprasJSON);
+  ocultarMensajeCarritoVacio();
+  actualizarCarritoHTML();
+}
 
 
 
@@ -31,22 +40,31 @@ function actualizarCarritoHTML() {
     filaCarrito.classList.remove("display-grid");
     filaCarrito.classList.add("d-none");
     contenidoCarrito.innerHTML = "";
+    localStorage.removeItem('listaCompras');
+    
   } else {
     // contenidoCarritoHTML guarda en esquema HTML la lista de los productos agregados al carrito
     let contenidoCarritoHTML = listaCompras.construirHTML();
     contenidoCarrito.innerHTML = contenidoCarritoHTML;
+    localStorage.setItem('listaCompras',JSON.stringify(listaCompras));
   }
+  
+}
+
+//función que oculta el mensaje de carrito vacío y se muestra los títulos de la tabla del carrito
+function ocultarMensajeCarritoVacio(){
+  carritoVacio.style.display = "none";
+  filaCarrito.classList.remove("d-none");
+  filaCarrito.classList.add("display-grid");
 }
 
 // función para agregar el contenido de la tabla de compras
 export async function agregarProducto(idProductoAgregar) {
   if (!isNaN(parseInt(idProductoAgregar))) {
-    // bloque que se ejecuta si la lista de productos esta vacía, en donde:
-    // se oculta el mensaje de carrito vacío y se muestra los títulos de la tabla del carrito
+
+    // bloque que se ejecuta si la lista de productos esta vacía
     if (listaCompras.listaVacia()) {
-      carritoVacio.style.display = "none";
-      filaCarrito.classList.remove("d-none");
-      filaCarrito.classList.add("display-grid");
+      ocultarMensajeCarritoVacio();
     }
 
     // creación de un nuevo producto adicionando la cantidad

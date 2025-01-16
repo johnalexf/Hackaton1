@@ -16,6 +16,11 @@ export class listaProductos {
     this.total = 0;
   }
 
+  recuperarDeLocalStorage(objetoJSON) {
+    this.productos = objetoJSON.productos;
+    this.total = objetoJSON.total;
+  }
+
 
   listaVacia(){
     return !this.productos.length;
