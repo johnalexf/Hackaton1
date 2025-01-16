@@ -41,17 +41,14 @@ export async function agregarProducto(idProductoAgregar) {
 
       actualizarCarrito();
       
-      alertas.productoAgregado()?
-      location.href = "#carrito":
-      console.log("Seguir comprando")
+      if(await alertas.productoAgregado()){
+        setTimeout(irAlCarrito,300);
+      }
     
     }else{
       
       if(await alertas.productoYaAgregado()){
-        // const elemento = document.getElementById('carrito');
-        // const posicionElemento = elemento.offsetTop;
-        // // window.scrollTo({ top: posicionElemento, behavior: 'smooth' });
-        // elemento.scrollIntoView({behavior: 'smooth'});
+        setTimeout(irAlCarrito,300);
       }
       
     }
@@ -60,6 +57,15 @@ export async function agregarProducto(idProductoAgregar) {
     console.log("el id no es un numero")
   }
   
+}
+
+//Esta función dirige a la pagina a la sección de carrito
+//Cuando es llamada en una función asíncrona esta pierde su funcionalidad
+//Al momento de terminar la función asíncrona por tanto al llamarla es necesario darle 
+//Un tiempo de espera para que se ejecute después de que termine la función asíncrona 
+function irAlCarrito(){
+   const elemento = document.getElementById('carrito');
+   elemento.scrollIntoView({behavior: 'smooth'});
 }
 
 window.agregarProducto = agregarProducto;
