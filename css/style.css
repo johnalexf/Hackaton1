@@ -4,6 +4,38 @@
   background-color: rgb(233, 233, 241);
 }
 
+.linkCarrito{
+  position: fixed;
+  z-index: 2;
+  right: 30px;
+  bottom: 30px;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: 
+  linear-gradient(rgba(222, 224, 228, 0.897),rgba(207, 210, 218, 0.836)),
+  url(https://cdn-icons-png.flaticon.com/128/523/523686.png) center center no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  border : 0.5px solid black;
+  box-shadow: 3px 2px rgba(0, 0, 0, 0.226);
+}
+
+.linkCarrito:hover{
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.226);  
+}
+
+.linkCarrito a{
+  color: rgb(77, 54, 54);
+  font-size: 1.8rem;
+}
+
+.linkCarrito a:hover{
+  color: rgb(17, 17, 17);
+}
+
 /* Estilos para el navbar */
 nav .icono {
   width: 27px;
@@ -112,7 +144,7 @@ input:disabled{
   text-decoration: none;
 }
 
-i {
+footer i {
   color: black;
 }
 
