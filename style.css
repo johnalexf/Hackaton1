@@ -50,6 +50,11 @@ nav .icono {
   align-items: center;
 }
 
+/* Se crea esta clase para poder modificarla con una mediaQuery */
+.display-grid{
+  display: grid;
+}
+
 .imagenProducto div{
     width: 50%;
     padding-right: 20px;
@@ -135,7 +140,7 @@ i {
 }
 
 @media (max-width: 768px) {
-  #tituloTablaCarrito,
+  .display-grid,
   .imagenProducto .nombreImagenProducto,
   .filaCarrito .precioProducto {
     display: none;
@@ -146,7 +151,6 @@ i {
   }
 
   .carrito .filaCarrito {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
   }

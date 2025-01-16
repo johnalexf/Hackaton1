@@ -27,8 +27,7 @@ export function agregarProducto(idProductoAgregar) {
     if(listaCompras.listaVacia()){
       carritoVacio.style.display  = "none";
       filaCarrito.classList.remove("d-none");
-      filaCarrito.classList.add("d-grid");
-
+      filaCarrito.classList.add("display-grid");  
     }
   
 
@@ -80,7 +79,7 @@ export function disminuirCantidadProducto(id) {
   
   if(listaCompras.listaVacia()){
     carritoVacio.style.display  = "block";
-    filaCarrito.classList.remove("d-grid");
+    filaCarrito.classList.remove("display-grid");
     filaCarrito.classList.add("d-none");
     contenidoCarrito.innerHTML = "";
   }else{
@@ -92,29 +91,5 @@ export function disminuirCantidadProducto(id) {
 
 window.disminuirCantidadProducto = disminuirCantidadProducto;
 
-function disminuir(producto) {
-  let indiceListaProductos = encontrarIndiceArrayObjetos(producto);
-  if (listaProductos[indiceListaProductos].cantidad == 1) {
-    eliminarProducto(producto);
-  } else {
-    listaProductos[indiceListaProductos].cantidad -= 1;
-    listaProductos[indiceListaProductos].total =
-      listaProductos[indiceListaProductos].cantidad *
-      listaProductos[indiceListaProductos].precio;
-  }
-  actualizarCarrito();
-}
 
 
-
-//funcion para eliminar un producto
-function eliminarProducto(productoDescartado) {
-  let indiceListaProductos = encontrarIndiceArrayObjetos(productoDescartado);
-  let indiceListaCompras = encontrarIndiceArray(
-    listaCompras,
-    indiceListaProductos
-  );
-  listaCompras.splice(indiceListaCompras, 1);
-
-  actualizarCarrito();
-}
