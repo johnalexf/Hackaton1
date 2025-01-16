@@ -111,7 +111,7 @@ export class listaProductos {
                 alt=${producto.nombre}
                 />
               </div>
-              <h5 class="item-filaCarrito nombreImagenProducto">
+              <h5 class="nombreImagenProducto">
               ${producto.nombre}</h5>
             </div>
             
