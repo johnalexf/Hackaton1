@@ -1,6 +1,10 @@
 // variable para guardar lista de productos disponibles con nombre, imagen y precio.
 import { productosDisponibles } from "../js/listProductos.js";
+
+// importación de las clases para poder crear productos del carrito y agregarlos a una lista
 import { productoCarrito , listaProductos } from "../js/scriptCarrito.js";
+
+import * as alertas from "../js/scriptAlertas.js";
 
 console.log(productosDisponibles);
 
@@ -17,12 +21,9 @@ let carritoVacio  = document.querySelector('.carritoVacio');
 let filaCarrito = document.querySelector('.filaCarrito');
 
 // función para modificar el contenido de la tabla de compras
-export function agregarProducto(idProductoAgregar) {
+export async function agregarProducto(idProductoAgregar) {
 
-  
   if(!isNaN( parseInt(idProductoAgregar))){
-
-
 
     if(listaCompras.listaVacia()){
       carritoVacio.style.display  = "none";
@@ -30,7 +31,6 @@ export function agregarProducto(idProductoAgregar) {
       filaCarrito.classList.add("display-grid");  
     }
   
-
     // creación de un nuevo producto adicionando la cantidad
     let producto = new productoCarrito(
         productosDisponibles[idProductoAgregar],1
@@ -40,11 +40,20 @@ export function agregarProducto(idProductoAgregar) {
     if(listaCompras.agregar(producto)){
 
       actualizarCarrito();
-
-      alert('producto agregado al carrito');
+      
+      alertas.productoAgregado()?
+      location.href = "#carrito":
+      console.log("Seguir comprando")
     
     }else{
-      alert('el producto ya esta agregado al carrito');
+      
+      if(await alertas.productoYaAgregado()){
+        // const elemento = document.getElementById('carrito');
+        // const posicionElemento = elemento.offsetTop;
+        // // window.scrollTo({ top: posicionElemento, behavior: 'smooth' });
+        // elemento.scrollIntoView({behavior: 'smooth'});
+      }
+      
     }
     
   }else{
@@ -68,13 +77,15 @@ export function aumentarCantidadProducto(id) {
 
 window.aumentarCantidadProducto = aumentarCantidadProducto;
 
-export function disminuirCantidadProducto(id) {
+export async function disminuirCantidadProducto(id) {
 
   // La función restar cantidad retorna un falso si la cantidad es uno
   // Entonces se confirma al usuario si desea eliminar el producto
-  if(!listaCompras.restarCantidad(id)){
-    alert('seguro desea eliminar el producto')
-    listaCompras.eliminar(id);
+  if(!listaCompras.restarCantidad(id) ){
+    if(await alertas.confirmacionEliminarProducto()){
+      listaCompras.eliminar(id);
+      alertas.productoEliminado();
+    }
   }
   
   if(listaCompras.listaVacia()){
