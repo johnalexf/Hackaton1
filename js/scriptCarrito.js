@@ -78,8 +78,6 @@ export class listaProductos {
         return false;
       }
       
-
-        this.actualizarTotal();
     } else {
       console.log("producto no encontrado");
     }
@@ -94,8 +92,6 @@ export class listaProductos {
 
   construirHTML(){
     let carritoHTML = ``;
-  
-    console.log()
   
     this.productos.forEach(
         producto =>{

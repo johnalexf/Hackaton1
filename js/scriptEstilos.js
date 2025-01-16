@@ -1,4 +1,4 @@
-
+// Modificación de los estilos del navbar para cuando el scroll vertical supera 50px
 function navbarScroll(){
 
     const navbar = document.querySelector('.navbar');
