@@ -10,10 +10,9 @@ export async function productoAgregado(){
     cancelButtonColor: "#3085d6",
     confirmButtonText: "Seguir Comprando",
     cancelButtonText: "Ir al carrito"
+
   }).then((result) => {
-    console.log(result)
     if(result.dismiss == 'cancel'){
-      
       respuesta = true;
     }
   });
@@ -33,8 +32,8 @@ export async function productoYaAgregado(){
         cancelButtonColor: "#3085d6",
         confirmButtonText: "Seguir Comprando",
         cancelButtonText: "Ir al carrito"
+
       }).then((result) => {
-        console.log(result)
         if(result.dismiss == 'cancel'){
           
           respuesta = true;
@@ -58,8 +57,8 @@ export async function confirmacionEliminarProducto(){
         cancelButtonColor: "#d33",
         confirmButtonText: "Eliminar",
         cancelButtonText: "Cancelar"
+        
       }).then((result) => {
-        console.log(result)
         respuesta = result.isConfirmed;
       });
 

@@ -102,7 +102,7 @@ export class listaProductos {
           carritoHTML += `
           <div class="filaCarrito d-grid ">
   
-            <div class="imagenProducto">
+            <div class="item-filaCarrito imagenProducto">
               <div>
                 <img
                 src=${producto.img}
@@ -110,19 +110,20 @@ export class listaProductos {
                 alt=${producto.nombre}
                 />
               </div>
-              <h5 class="nombreImagenProducto">${producto.nombre}</h5>
+              <h5 class="item-filaCarrito nombreImagenProducto">
+              ${producto.nombre}</h5>
             </div>
             
-            <div class="tituloProducto">
+            <div class="item-filaCarrito tituloProducto">
               <h5>${producto.nombre}</h5>
             </div>
   
-            <div class="precioProducto">
+            <div class="item-filaCarrito precioProducto">
               <p class="lead fw-bold">$${producto.precio.toLocaleString()}</p>
             </div>
   
-            <div class="cantidadCarrito d-flex">
-              <div class="input-group ">
+            <div class="item-filaCarrito cantidadCarrito">
+              <div class="input-group justify-content-center">
                 <button class="btn" onclick="disminuirCantidadProducto(${producto.id})">
                   <i class="fa-solid fa-minus"></i>
                 </button>
@@ -133,8 +134,14 @@ export class listaProductos {
               </div>
             </div>
   
-            <div class="totalProducto ">
+            <div class="item-filaCarrito totalProducto ">
               <p class="lead fw-bold">$${producto.subtotal.toLocaleString()}</p>
+            </div>
+
+            <div class="item-eliminar-filaCarrito">
+              <button class="btn" onclick="eliminarProducto(${producto.id})">
+                <i class="fa-solid fa-trash"></i>
+              </button>
             </div>
   
           </div>
@@ -144,12 +151,12 @@ export class listaProductos {
     );
     carritoHTML += `
       <div class="filaCarrito d-grid">
-        <div></div>
-        <div></div>
-        <div>
+        <div class="item-filaCarrito"></div>
+        <div class="item-filaCarrito"></div>
+        <div class="item-filaCarrito">
           <h5>Total pedido</h5>
         </div>
-        <div>
+        <div class="item-filaCarrito">
           <p class="lead fw-bold">
             $${this.total.toLocaleString()}
           </p>

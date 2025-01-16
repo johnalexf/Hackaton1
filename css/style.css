@@ -4,6 +4,7 @@
   background-color: rgb(233, 233, 241);
 }
 
+/* Estilos para el botón de carrito ubicado a la esquina inferior derecha */
 .linkCarrito{
   position: fixed;
   z-index: 2;
@@ -67,18 +68,25 @@ nav .icono {
 
 /* Estilos para la tabla de productos agregados al carrito */
 .carrito .filaCarrito {
+  position: relative;
   grid-template-columns: 2fr repeat(3, 1fr);
   padding: 10px 0;
   border-bottom: 1px solid #21252959;
 }
 
 
-.filaCarrito div {
+.filaCarrito .item-filaCarrito {
   width: 100%;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.filaCarrito .item-eliminar-filaCarrito{
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* Se crea esta clase para poder modificarla con una mediaQuery */

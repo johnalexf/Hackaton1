@@ -71,9 +71,18 @@ function irAlCarrito(){
 window.agregarProducto = agregarProducto;
 
 function actualizarCarrito(){
-  // contenidoCarritoHTML guarda en esquema HTML la lista de los productos agregados al carrito
-  let contenidoCarritoHTML = listaCompras.construirHTML();      
-  contenidoCarrito.innerHTML = contenidoCarritoHTML;
+  
+  if(listaCompras.listaVacia()){
+    carritoVacio.style.display  = "block";
+    filaCarrito.classList.remove("display-grid");
+    filaCarrito.classList.add("d-none");
+    contenidoCarrito.innerHTML = "";
+  }else{
+    // contenidoCarritoHTML guarda en esquema HTML la lista de los productos agregados al carrito
+    let contenidoCarritoHTML = listaCompras.construirHTML();      
+    contenidoCarrito.innerHTML = contenidoCarritoHTML;
+  }
+  
 }
 
 export function aumentarCantidadProducto(id) {
@@ -88,25 +97,22 @@ export async function disminuirCantidadProducto(id) {
   // La función restar cantidad retorna un falso si la cantidad es uno
   // Entonces se confirma al usuario si desea eliminar el producto
   if(!listaCompras.restarCantidad(id) ){
-    if(await alertas.confirmacionEliminarProducto()){
-      listaCompras.eliminar(id);
-      alertas.productoEliminado();
-    }
-  }
-  
-  if(listaCompras.listaVacia()){
-    carritoVacio.style.display  = "block";
-    filaCarrito.classList.remove("display-grid");
-    filaCarrito.classList.add("d-none");
-    contenidoCarrito.innerHTML = "";
+      await eliminarProducto(id);
   }else{
-    actualizarCarrito();
+      actualizarCarrito();
   }
   
-
 }
 
 window.disminuirCantidadProducto = disminuirCantidadProducto;
 
+export async function eliminarProducto(id){
+  if(await alertas.confirmacionEliminarProducto()){
+    listaCompras.eliminar(id);
+    alertas.productoEliminado();
+  }
+  actualizarCarrito();
+}
 
+window.eliminarProducto = eliminarProducto;
 
