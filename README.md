@@ -39,9 +39,9 @@ T Compra es una landing page de e-commerce diseñada para los amantes del tenis.
 1.  **Clonar el Repositorio:**
 
    ```bash
-    git clone [https://tcompra.netlify.app/](https://tcompra.netlify.app/)
+    git clone [https://tcompra.netlify.app/]
     ```
-
+   (https://tcompra.netlify.app/)
 
 2.  **Abrir con Live Server (Recomendado):**
 
